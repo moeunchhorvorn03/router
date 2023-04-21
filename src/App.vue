@@ -1,5 +1,10 @@
 <template>
   <the-navigation></the-navigation>
+  <div class="center">
+    <button @click="back">Back</button>
+  <button @click="redirect">Redirect</button>
+  <button @click="forward">Forward</button>
+  </div>
   <main>
     <router-view></router-view>
   </main>
@@ -27,6 +32,17 @@ export default {
         { id: 'u4', fullName: 'Alex Blackfield', role: 'Consultant' },
         { id: 'u5', fullName: 'Marie Smith', role: 'Consultant' },
       ],
+    }
+  },
+  methods: {
+    back() {
+      this.$router.go(-1)
+    },
+    forward() {
+      this.$router.go(1)
+    },
+    redirect() {
+      this.$router.push('/team')
     }
   },
   provide() {

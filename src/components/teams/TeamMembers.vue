@@ -1,6 +1,5 @@
 <template>
   <section>
-    <h2>{{ teamName }}</h2>
     <ul>
       <user-item
         v-for="member in members"
@@ -19,15 +18,6 @@ export default {
   inject: ['users', 'teams'],
   components: {
     UserItem
-  },
-  data() {
-    return {
-      teamName: 'Test',
-      members: [
-        { id: 'u1', fullName: 'Max Schwarz', role: 'Engineer' },
-        { id: 'u2', fullName: 'Max Schwarz', role: 'Engineer' },
-      ],
-    };
   },
   methods: {
     loadMember(){

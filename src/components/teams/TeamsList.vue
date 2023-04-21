@@ -1,4 +1,6 @@
 <template>
+  <v-card>
+    <v-card-item>
   <ul>
     <teams-item
       v-for="team in teams"
@@ -8,6 +10,8 @@
       :member-count="team.members.length"
     ></teams-item>
   </ul>
+  </v-card-item>
+  </v-card>
 </template>
 
 <script>

@@ -57,4 +57,8 @@ a {
   color: aliceblue;
   text-decoration: none;
 }
+a:hover {
+  color: aliceblue;
+  text-decoration: none;
+}
 </style>
